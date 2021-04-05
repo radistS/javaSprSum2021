@@ -1,6 +1,6 @@
 package com.hillel.lesson_05.transport;
 
-public class Transport {
+public abstract class Transport {
     public Transport(String name) {
         this.name = name;
     }
