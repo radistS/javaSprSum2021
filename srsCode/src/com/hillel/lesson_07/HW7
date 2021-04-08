@@ -1,0 +1,30 @@
+Реализовать простую коллекцию для String на базе массива.
+
+добавить следующие методы для работы с коллекцией:
+добавлять (add), (по индеку или значению)
+удалять(delete), (по индексу или значению)
+доставать по индексу (get),
+
+String[] srt - массив
+int count - количество элементов в массиве
+
+
+StringCollection(){
+    this.arr = new String[10];
+}
+
+StringCollection(int length){
+    this.arr = new String[length];
+}
+
+new array x2 size
+
+1. public boolean add(int index, String value);
+2. public boolean add(String value);
+3. public boolean delete(int index);
+4. public boolean delete(String value);
+5. public String get(int index);
+
+[3]
+1. 1 2 3 -> [2]4 -> 1 2 4 3
+2. 1 2 3 -> 4 -> 1 2 3 4
