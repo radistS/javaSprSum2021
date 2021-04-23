@@ -1,6 +1,5 @@
 package com.hillel.lesson_10.charCount;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 

@@ -17,9 +17,9 @@ public class StringEx {
         }
         System.out.println();
         String str2 = "";
-        System.out.println(str2.length());
-        System.out.println(str2.isBlank());
-        System.out.println(str2.isEmpty());
+//        System.out.println(str2.length());
+//        System.out.println(str2.isBlank());
+//        System.out.println(str2.isEmpty());
 
 
         str1 = "one";
