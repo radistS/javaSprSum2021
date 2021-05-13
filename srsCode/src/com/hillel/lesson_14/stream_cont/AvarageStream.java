@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 public class AvarageStream {
     public static void main(String[] args) {
         System.out.println(IntStream.range(2, 10)
-                .peek(e -> System.out.print(e + " "))
                 .average().getAsDouble());
 
         System.out.println(Stream.of(1, 5, 3, 9).mapToDouble(e -> e).average().getAsDouble());

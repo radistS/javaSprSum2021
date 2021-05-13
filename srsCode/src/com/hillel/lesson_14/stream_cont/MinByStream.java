@@ -10,14 +10,12 @@ import java.util.stream.Stream;
 public class MinByStream {
     public static void main(String[] args) {
         Optional<String> collect = Stream
-                .of("a", "bb", "ccc", "dddd", "ttttt")
-                .collect(Collectors.minBy(Comparator.comparing(String::length)));
+                .of("a", "bb", "ccc", "dddd", "ttttt").min(Comparator.comparing(String::length));
 
         collect.ifPresent(System.out::println);
 
         collect = Stream
-                .of("a", "bb", "ccc", "dddd", "ttttt")
-                .collect(Collectors.maxBy(Comparator.comparing(String::length)));
+                .of("a", "bb", "ccc", "dddd", "ttttt").max(Comparator.comparing(String::length));
 
         collect.ifPresent(e -> System.out.println(e) );
 
