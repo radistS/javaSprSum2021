@@ -1,0 +1,38 @@
+<?com.pars.xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <firstName>Alex</firstName>
+        <lastName>Stepurko</lastName>
+        <age>33</age>
+        <email>stepurko@info.com</email>
+        <technology>Java</technology>
+    </user>
+    <user>
+        <firstName>Mike</firstName>
+        <lastName>Dvier</lastName>
+        <age>50</age>
+        <email>dvier@info.com</email>
+        <technology>Fortran</technology>
+    </user>
+    <user>
+        <firstName>Martin</firstName>
+        <lastName>Odersky</lastName>
+        <age>61</age>
+        <email>odersky@scala.org</email>
+        <technology>scala</technology>
+    </user>
+    <user>
+        <firstName>Mark</firstName>
+        <lastName>Tchukerberg</lastName>
+        <age>28</age>
+        <email>facebook@info.com</email>
+        <technology>php</technology>
+    </user>
+    <user>
+        <firstName>Pavel</firstName>
+        <lastName>Durov</lastName>
+        <age>28</age>
+        <email>telegram@info.com</email>
+        <technology>php</technology>
+    </user>
+</users>

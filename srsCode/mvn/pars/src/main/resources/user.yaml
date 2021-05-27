@@ -1,0 +1,115 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties.hibernate:
+      format_sql: true
+      enable_lazy_load_no_trans: true
+      dialect: org.hibernate.dialect.MySQLDialect
+  jackson:
+    default-property-inclusion: NON_EMPTY
+  application:
+    name: sport-event-integrator
+  liquibase:
+    enabled: true
+    liquibase-schema: sport_events
+    default-schema: sport_events
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    sender:
+      type: web
+  codec:
+    max-in-memory-size: 40MB
+
+server:
+  port: 10900
+
+zones:
+  default: 0
+
+sevents:
+  appLanguages: en, gr, de, ru, fr, tr
+  defaultLanguage: en
+  liveDefaultMarkets: 7, 186
+  highlightDefaultMarkets: 7, 1, 186
+  desktopLiveDefaultMarkets: 7, 1, 186, 14, 223, 237, 187, 18, 116, 189, 225, 238, 10, 463, 29, 8
+  desktopPreLiveDefaultMarkets: 1, 186, 14, 223, 237, 187, 18, 116, 189, 225, 238, 10, 463, 29, 8
+  rabbitmq:
+    broadcastName: bupdater.broadcast
+    broadcastRoutingKey: bupdater.broadcast
+    betStopName: sevents.betStop
+    betStopExchange: uconnector.betStopExchange
+    liveExchange: sevents.liveExchange
+    liveChangesName: bupdater.liveEvents
+    liveChangesRoutingKey: bupdater.liveEvents
+    oddsChangesName: sevents.oddsUpdates
+    oddsChangesRoutingKey: sevents.oddsChanges
+    exchangeName: uconnector.exchange
+    oddsExchange: uconnector.oddsExchange
+    matchExchange: uconnector.matchExchange
+    matchUpdateQueue: sevents.seiMatchQueue
+    routingKey: sevents.sport-events-integrator
+
+sport-events-service:
+  version: v1
+  poll-delay:
+    ticket-changes: 3000
+    live-data: 1000
+    update: 1000
+    ping: 55000
+  soon-live-limit: 20
+  soon-live-hrs-limit: 50
+  synchronization-parts: 40
+
+executor:
+  maxPoolSize: 150
+  corePoolSize: 5
+  queueCapacity: 150
+
+cors.origin: https://localhost:3000, http://localhost:3000, https://beton.ngsb-dev.com, https://api-beton.ngsb-dev.com
+
+#24*60*60 = 1day
+memcached:
+  betslip-expiration: 84000
+
+scheduler:
+  fixedUnreceivedMarkets: 500 # 500ms to reduce the absent markets for events
+  fixedDelaySynchronizeCaches: 3600000 #each 60 min
+  fixedDelayHighlightCacheSynch: 600000 #each 10 min
+  fixed_ended_matches_exclusion_delay: 3600000
+
+betslip:
+  cookie:
+    name: betSlipId
+    maxAge: 84000
+
+  selections:
+    limit: 30
+    expiration: 3
+  wager:
+    default: 0.00
+  executor:
+    maxPoolSize: 25
+    corePoolSize: 5
+    queueCapacity: 150
+  defaultCountryCode: DE
+
+backgroundupdater:
+  version: v1
+
+management.endpoints.web.exposure.include: "*"
+management.endpoint.caches.enabled: true
+management.endpoint.conditions.enabled: true
+management.endpoint.heapdump.enabled: true
+management.endpoint.httptrace.enabled: true
+management.endpoint.integrationgraph.enabled: true
+management.endpoint.metrics.enabled: true
+management.endpoint.scheduledtasks.enabled: true
+management.endpoint.sessions.enabled: true
+management.endpoint.shutdown.enabled: true
+management.endpoint.threaddump.enabled: true

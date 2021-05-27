@@ -1,0 +1,7 @@
+<users>
+    <user firstName="Alex" lastName="Stepurko" age="33" email="stepurko@info.com" technology="java"/>
+    <user firstName="" ne="Mike" lastName="Dvier" age="50" email="dvier@info.com" technology="fortran"/>
+    <user firstName="Martin" lastName="Odersky" age="61" email="odersky@scala.org" technology="scala"/>
+    <user firstName="Mark" lastName="Tchukerberg" age="28" email="facebook@info.com" technology="php"/>
+    <user firstName="Pavel" lastName="Durov" age="29" email="telegram@info.com" technology="php"/>
+</users>

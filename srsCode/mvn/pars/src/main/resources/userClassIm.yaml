@@ -1,0 +1,16 @@
+firstName: "Alex"
+lastName: "Stepurko"
+age: 33
+email: "stepurko@info.com"
+technology: "Java"
+active : true
+contact:
+  - type: "mobile"
+    number: 380505554455
+  - type: "home"
+    number: 380487773344
+address:
+  line: "Sadovaya str"
+  city: "Odesa"
+  country: "Ukraine"
+  zip: 65000

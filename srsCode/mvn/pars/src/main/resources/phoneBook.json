@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "Alex",
+    "lastName": "Stepurko",
+    "age": "33",
+    "email": "stepurko@info.com",
+    "technology": "Java"
+  },
+  {
+    "firstName": "Mike",
+    "lastName": "Dvier",
+    "age": "50",
+    "email": "dvier@info.com",
+    "technology": "Fortran"
+  },
+  {
+    "firstName": "Martin",
+    "lastName": "Odersky",
+    "age": "61",
+    "email": "odersky@scala.org",
+    "technology": "scala"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Tchukerberg",
+    "age": "28",
+    "email": "facebook@info.com",
+    "technology": "php"
+  },
+  {
+    "firstName": "Pavel",
+    "lastName": "Durov",
+    "age": "28",
+    "email": "telegram@info.com",
+    "technology": "php"
+  }
+]

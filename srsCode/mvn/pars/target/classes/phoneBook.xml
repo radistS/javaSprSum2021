@@ -1,0 +1,9 @@
+<?com.pars.xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user firstName="Alex" lastName="Stepurko" age="33" text="text" email="stepurko@info.com" technology="java">
+
+    </user>
+    <user firstName="Mark" lastName="Tchukerberg" age="28" email="facebook@info.com" technology="php"/>
+    <admin firstName="Pavel" lastName="Durov" email="telegram@info.com" permission="HIGH"/>
+    <admin firstName="Pavel" lastName="Durov" email="telegram@info.com" permission="LOW"/>
+</users>
