@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"hello","l":"Application"},{"p":"hello.controller","l":"ControllerExceptionHandler"},{"p":"hello.dto","l":"Student"},{"p":"hello.controller","l":"StudentController"},{"p":"hello.dto","l":"StudentCreate"},{"p":"hello.service","l":"StudentGenerator"},{"p":"hello.config","l":"SwaggerConfig"}]
