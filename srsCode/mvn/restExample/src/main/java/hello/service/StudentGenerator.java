@@ -27,7 +27,7 @@ public class StudentGenerator {
      *
      * @param firstName - FN
      * @param lastName - LN
-     * @return {@link List} of {@link Student}
+     * @return {@link java.util.ArrayList} of {@link Student}
      */
     public static Student getStudent(String firstName, String lastName){
         return new Student(UUID.randomUUID(), firstName, lastName);
