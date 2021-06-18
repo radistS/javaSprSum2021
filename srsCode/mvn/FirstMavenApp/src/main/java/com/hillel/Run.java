@@ -1,12 +1,14 @@
 package com.hillel;
 
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class Run {
     public static void main(String[] args) {
-        System.out.println("My first maven application ...");
-
+        System.out.println();
         User user = new User("Alex", "alex@email.com", "+380569454654", 27);
 
 

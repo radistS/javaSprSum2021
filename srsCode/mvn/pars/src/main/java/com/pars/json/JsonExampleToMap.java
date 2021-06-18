@@ -16,12 +16,15 @@ public class JsonExampleToMap {
                 "'identifiers' : {'phone' : '123456', 'email' : alex@info.com}" +
                 "}";
 
+
+        String str = "[" + json + "," + json + "]";
+
         Gson gson = new Gson();
-        Map map = gson.fromJson(json, Map.class);
+        Map[] map = gson.fromJson(str, Map[].class);
 
         System.out.println(map);
 
-        Set<String> set = map.keySet();
+//        Set<String> set = map.keySet();
 
 //        for (String str : set) {
 //            System.out.println("-----------------------");
@@ -30,7 +33,7 @@ public class JsonExampleToMap {
 //            System.out.println(map.get(str).getClass());
 //        }
 
-        String str = gson.toJson(map);
+         str = gson.toJson(map);
 
         System.out.println(str);
 
