@@ -1,0 +1,8 @@
+com/liqubase/Example.class
+com/liqubase/dao/CountryDao.class
+com/liqubase/data/Country.class
+com/liqubase/dao/StudentDao.class
+com/liqubase/data/Student.class
+com/liqubase/data/City.class
+com/liqubase/HibernateUtil.class
+com/liqubase/dao/CityDao.class

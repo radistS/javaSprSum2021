@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet author="A.Stepurko" id="addColumnAbr3">
+        <addColumn tableName="country">
+            <column name="abr" type="varchar(3)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="updateSizeColumnAbr">
+        <modifyDataType tableName="country" columnName="abr" newDataType="VARCHAR(5)" />
+    </changeSet>
+
+    <changeSet id="readFromFile" author="aStepurko">
+        <loadData tableName="country"
+                  file="src/main/resources/liquibase/sql/country.csv"
+                  separator="," >
+            <column header="name" name="NAME" type="STRING"/>
+            <column header="abr" name="abr" type="STRING"/>
+        </loadData>
+    </changeSet>
+    
+</databaseChangeLog>

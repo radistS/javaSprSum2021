@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="createTable" author="aStepurko">
+        <createTable tableName="student">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="firstname" type="VARCHAR(50)"/>
+            <column name="lastname" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+
+      <changeSet author="A.Stepurko" id="addColumnAddress">
+            <addColumn tableName="student">
+                <column name="address" type="varchar(255)"/>
+            </addColumn>
+        </changeSet>
+
+
+
+    <changeSet author="A.Stepurko" id="addColumnHomePhone">
+        <addColumn tableName="student">
+            <column name="hphone" type="varchar(15)"/>
+        </addColumn>
+    </changeSet>
+
+
+    <changeSet author="A.Stepurko" id="addColumnHomePhone_1">
+        <addColumn tableName="student">
+            <column name="fax" type="varchar(15)"/>
+            <column name="facebook" type="varchar(50)"/>
+            <column name="instagram" type="varchar(50)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="createTableCountry" author="aStepurko">
+        <createTable tableName="country">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="addColumnAbr">
+        <addColumn tableName="country">
+            <column name="abr" type="varchar(3)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="dropColumnDecription">
+        <dropColumn tableName="country">
+            <column name="abr" type="varchar(50)"/>
+        </dropColumn>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="addColumnAbr1">
+        <addColumn tableName="country">
+            <column name="abr" type="varchar(3)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="dropColumnDecription1">
+        <dropColumn tableName="country">
+            <column name="abr" type="varchar(50)"/>
+        </dropColumn>
+    </changeSet>
+
+</databaseChangeLog>
