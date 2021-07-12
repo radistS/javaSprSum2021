@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="test"
+          class="com.spring.Test"
+    init-method="init"/>
+
+    <bean id="test1"
+          class="com.spring.Test"/>
+
+    <bean id="say"
+          class="com.spring.Say"
+          init-method="init"
+          scope="prototype"
+          destroy-method="destroy"/>
+
+    <bean id="springHelloWorld" class="com.spring.SpringHelloWorld" init-method="init"
+          destroy-method="getHelloMessage" scope="prototype"
+          name="helloWorld">
+        <property name="helloMessage" value="Hello World!"/>
+        <property name="user" ref="teacher"/>
+        <property name="student" ref="student"/>
+    </bean>
+
+    <bean id="student" class="com.spring.Student" scope="singleton">
+        <property name="lastName" value="Ivan"/>
+        <property name="firstName" value="Ivanov"/>
+        <property name="date" value="20200222"/>
+        <property name="email" value="mail@mail.com"/>
+    </bean>
+
+    <bean id="teacher" class="com.spring.Teacher" scope="singleton">
+        <property name="lastName" value="Sidr"/>
+        <property name="firstName" value="Sidorov"/>
+        <property name="phone" value="0505055050"/>
+    </bean>
+</beans>

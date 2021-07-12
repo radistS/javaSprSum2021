@@ -10,7 +10,7 @@
 		<property name="hibernate.connection.password">rootroot</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
         <mapping class="com.howtodoinjava.hibernate.manyToMany.joinTable.ReaderEntity"/>
         <mapping class="com.howtodoinjava.hibernate.manyToMany.joinTable.SubscriptionEntity"/>
     </session-factory>
