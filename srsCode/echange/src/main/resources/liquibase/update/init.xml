@@ -3,6 +3,50 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
+    <changeSet author="A.Stepurko" id="createTableUser">
+        <createTable tableName="user">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column  name="first_name"  type="varchar(255)"/>
+            <column  name="last_name"  type="varchar(255)"/>
+            <column  name="phone"  type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+     <changeSet author="A.Stepurko" id="createTableWallet">
+            <createTable tableName="wallet">
+                <column name="id" type="INT" autoIncrement="true">
+                    <constraints nullable="false" primaryKey="true" />
+                </column>
+                <column  name="currency"  type="varchar(3)"/>
+                <column  name="ammount"  type="DECIMAL"/>
+                <column  name="last_update"  type="TIMESTAMP"/>
+            </createTable>
+        </changeSet>
+
+    <changeSet author="A.Stepurko" id="createTableNotification">
+            <createTable tableName="notification">
+                <column name="id" type="INT" autoIncrement="true">
+                    <constraints nullable="false" primaryKey="true" />
+                </column>
+                <column  name="type"  type="varchar(20)"/>
+                <column  name="content"  type="varchar(2048)"/>
+            </createTable>
+        </changeSet>
+
+    <changeSet author="A.Stepurko" id="addColumnUserId">
+        <addColumn tableName="wallet">
+            <column name="user_id" type="INT"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="A.Stepurko" id="addColumnNotificationUserId">
+        <addColumn tableName="notification">
+            <column name="user_id" type="INT"/>
+        </addColumn>
+    </changeSet>
+
     <changeSet author="A.Stepurko" id="createTableRate">
         <createTable tableName="rate">
             <column name="id" type="INT" autoIncrement="true">

@@ -1,4 +1,4 @@
-package com.bank.echange.repositori;
+package com.bank.echange.repository;
 
 
 import com.bank.echange.entity.CurrencyEnum;
